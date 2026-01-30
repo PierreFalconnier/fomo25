@@ -7,7 +7,7 @@ build_docker.sh
 run_cluster.sh
 eval_regression.sh
 eval_classification.sh
-eval_segmentation.sh
+eval_regression.sh
 
 # C extensions
 *.so
@@ -73,3 +73,7 @@ data/*
 .ipynb_checkpoints
 .fomoenv
 yucca
+
+# Model weights (distributed via GitHub Releases, not in repo)
+# Download from: https://github.com/jbanusco/fomo25/releases
+weights/*.ckpt
