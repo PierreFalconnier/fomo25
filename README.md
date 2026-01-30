@@ -122,6 +122,39 @@ Key finetuning parameters:
 
 ## 💾 Model Checkpoints
 
+### Pretrained Weights
+
+| Model | Dataset | Download |
+|-------|---------|----------|
+| MultiModalUNetVAE | FOMO-60K (100 epochs) | [v1.0.0 Release](https://github.com/jbanusco/fomo25/releases/tag/v1.0.0) |
+
+**Quick Download:**
+```bash
+# Using the download script
+./scripts/download_weights.sh
+
+# Or manually
+curl -L -o weights/fomo25_mmunetvae_pretrained.ckpt \
+  https://github.com/jbanusco/fomo25/releases/download/v1.0.0/fomo25_mmunetvae_pretrained.ckpt
+```
+
+**Load in Python:**
+```python
+from utils.load_weights import load_pretrained_checkpoint
+
+checkpoint = load_pretrained_checkpoint()
+model.load_state_dict(checkpoint['state_dict'], strict=False)
+```
+
+### 🐳 Docker
+
+Pull the pre-built image with weights included:
+
+```bash
+docker pull jbanusco/sslmmunetave:1.0.0
+```
+
+Docker Hub: [jbanusco/sslmmunetave](https://hub.docker.com/r/jbanusco/sslmmunetave)
 
 
 ## 💻 Hardware Requirements
