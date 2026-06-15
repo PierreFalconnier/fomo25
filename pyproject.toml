@@ -36,7 +36,8 @@ test = [
 ]
 
 [tool.setuptools]
-package-dir = { "jomo" = "src/jomo", "models" = "src/jomo/models", "utils" = "src/jomo/utils" }
+package-dir = {"" = "src"}
+packages = {find = {where = ["src"]}}
 
 [tool.pytest]
 testpaths = ["tests"]
