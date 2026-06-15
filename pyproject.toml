@@ -3,9 +3,9 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "fomo-code"
+name = "jomo"
 version = "0.1.0"
-description = "FOMO25 Challenge Codebase - Foundation Models for Brain MRI Analysis"
+description = "FOMO25 Challenge Codebase - Wrapped into Jomo namespace"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
@@ -36,8 +36,7 @@ test = [
 ]
 
 [tool.setuptools]
-package-dir = {"" = "src"}
-packages = {find = {where = ["src"]}}
+package-dir = {"jomo" = "src/jomo"}
 
 [tool.pytest]
 testpaths = ["tests"]
